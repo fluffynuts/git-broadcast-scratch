@@ -17,4 +17,6 @@ jobs:
     - name: broadcast master changes to satellite branches
       run: |
         git remote show
+        git fetch --all
+        git checkout master
         npx git-broadcast
