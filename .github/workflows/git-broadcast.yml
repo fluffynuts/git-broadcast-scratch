@@ -19,5 +19,6 @@ jobs:
         git remote show
         git fetch --all
         git checkout master
-        git branch -a --list
+        git branch -a --list *
+        git branch -a --list '*'
         npx git-broadcast
