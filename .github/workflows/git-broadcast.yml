@@ -16,4 +16,5 @@ jobs:
         node-version: '12'
     - name: broadcast master changes to satellite branches
       run: |
+        git remote show
         npx git-broadcast
