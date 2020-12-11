@@ -19,6 +19,8 @@ jobs:
         git remote show
         git fetch --all
         git checkout master
+        echo "first unquoted"
         git branch -a --list *
+        echo "now quoted"
         git branch -a --list '*'
         npx git-broadcast
