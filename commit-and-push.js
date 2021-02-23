@@ -1,7 +1,10 @@
 const zpad = require("zeropad");
+const { ExecStepContext } = require("exec-step");
+const Git = require("simple-git");
 
 (async function main() {
   const
+    ctx = new ExecStepContext(),
     now = new Date(),
     year = now.getFullYear(),
     month = now.getMonth() + 1,
@@ -10,11 +13,14 @@ const zpad = require("zeropad");
     min = now.getMinutes(),
     sec = now.getSeconds(),
     timestamp = `${zpad(year, 4)}-${zpad(month)}-${zpad(day)} ${zpad(hour)}:${zpad(min)}:${zpad(sec)}`,
-    Git = require("simple-git"),
-    git = new Git(".");
+    git = new Git("."),
+    message = `:alembic: ${timestamp}`;
 
-  await git.add(":/");
-  await git.commit(`:alembic: ${timestamp}`);
-  await git.push();
+
+  await ctx.exec(`commit`, async () => {
+    await git.add(":/");
+    await git.commit(message);
+  })
+  await ctx.exec(`push`, git.push);
 })();
 
