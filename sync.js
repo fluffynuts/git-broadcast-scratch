@@ -17,6 +17,9 @@ const Git = require("simple-git");
     message = `:alembic: ${timestamp}`;
 
 
+  await ctx.exec(`pull with rebase`, async () => {
+    await git.pull({ "--rebase": true });
+  });
   await ctx.exec(`commit "${message}"`, async () => {
     await git.add(":/");
     await git.commit(message);

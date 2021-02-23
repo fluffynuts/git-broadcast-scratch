@@ -2,9 +2,9 @@
   "name": "git-broadcast-scratch",
   "version": "1.0.0",
   "description": "A scratch area to test out the theory of git-broadcast !",
-  "main": "commit-and-push.js",
+  "main": "sync.js",
   "scripts": {
-    "commit": "node commit-and-push.js"
+    "sync": "node sync.js"
   },
   "repository": {
     "type": "git",
