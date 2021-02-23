@@ -21,6 +21,6 @@ const Git = require("simple-git");
     await git.add(":/");
     await git.commit(message);
   })
-  await ctx.exec(`push`, git.push);
+  await ctx.exec(`push`, async () => await git.push);
 })();
 
