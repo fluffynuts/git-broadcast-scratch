@@ -17,4 +17,5 @@ jobs:
     - name: broadcast master changes to satellite branches
       run: |
         npx git-broadcast --version
+        echo "GITHUB_REF is $GITHUB_REF"
         DEBUG='*' npx git-broadcast@latest --from $GITUB_REF
