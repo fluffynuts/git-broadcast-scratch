@@ -23,5 +23,5 @@ jobs:
         git branch -a --list *
         echo "now quoted"
         git branch -a --list '*'
-        echo "wat 1"
+        npx git-broadcast --version
         npx git-broadcast
