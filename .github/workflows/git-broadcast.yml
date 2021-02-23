@@ -16,12 +16,11 @@ jobs:
         node-version: '12'
     - name: broadcast master changes to satellite branches
       run: |
+        echo "default branch: $default-branch"
         git remote show
         echo "using fetch refs:"
         git config remote.origin.fetch
         git fetch --all
         git checkout master
-        echo "listing all branches"
-        git branch -a --list '*'
         npx git-broadcast --version
         DEBUG='*' npx git-broadcast
