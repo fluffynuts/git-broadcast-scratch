@@ -23,4 +23,4 @@ jobs:
         git fetch --all
         git checkout master
         npx git-broadcast --version
-        DEBUG='*' npx git-broadcast
+        DEBUG='*' npx git-broadcast --from $GITUB_REF

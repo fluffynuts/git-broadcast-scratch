@@ -17,7 +17,7 @@ const Git = require("simple-git");
     message = `:alembic: ${timestamp}`;
 
 
-  await ctx.exec(`commit`, async () => {
+  await ctx.exec(`commit "${message}"`, async () => {
     await git.add(":/");
     await git.commit(message);
   })
