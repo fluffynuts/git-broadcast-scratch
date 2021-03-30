@@ -1,0 +1,26 @@
+{
+  "name": "git-broadcast-scratch",
+  "version": "1.0.0",
+  "description": "A scratch area to test out the theory of git-broadcast !",
+  "main": "sync.js",
+  "scripts": {
+    "sync": "node sync.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fluffynuts/git-broadcast-scratch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fluffynuts/git-broadcast-scratch/issues"
+  },
+  "homepage": "https://github.com/fluffynuts/git-broadcast-scratch#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "exec-step": "^0.4.0",
+    "simple-git": "^2.35.1",
+    "zeropad": "^1.1.0"
+  }
+}
