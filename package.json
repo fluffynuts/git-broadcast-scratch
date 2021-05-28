@@ -4,7 +4,8 @@
   "description": "A scratch area to test out the theory of git-broadcast !",
   "main": "sync.js",
   "scripts": {
-    "sync": "node sync.js"
+    "sync": "node sync.js",
+    "echo": "echo foo"
   },
   "repository": {
     "type": "git",
